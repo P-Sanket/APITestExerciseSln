@@ -27,7 +27,8 @@ namespace API.Tests.Features
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "Categories"};
         
 #line 1 "CategoriesAPITest.feature"
 #line hidden
@@ -93,21 +94,27 @@ namespace API.Tests.Features
         
         public virtual void FeatureBackground()
         {
-#line 3
-#line hidden
 #line 4
+#line hidden
+#line 5
     testRunner.Given("there is a categories API endpoint", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
         public virtual void ToVerifyTheStatusCodeOfTheResponse(string specificCategory, string statusCode, string[] exampleTags)
         {
-            string[] tagsOfScenario = exampleTags;
+            string[] @__tags = new string[] {
+                    "Smoke"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("specificCategory", specificCategory);
             argumentsOfScenario.Add("statusCode", statusCode);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify the status code of the response", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 6
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -117,13 +124,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
+#line 4
 this.FeatureBackground();
 #line hidden
-#line 7
+#line 9
     testRunner.When(string.Format("a GET request is made to a {0}", specificCategory), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 10
     testRunner.Then(string.Format("the status code is {0}", statusCode), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -133,17 +140,19 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To verify the status code of the response: 6327")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "To verify the data present in the response sent by Categories API endpoint")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Categories")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Smoke")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "6327")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:specificCategory", "6327")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:statusCode", "200")]
         public void ToVerifyTheStatusCodeOfTheResponse_6327()
         {
-#line 6
+#line 8
 this.ToVerifyTheStatusCodeOfTheResponse("6327", "200", ((string[])(null)));
 #line hidden
         }
         
-        public virtual void ToVerifyTheNamePropertyInTheRepsonseFromTheEndpoint(string specificCategory, string name, string promotionName, string promotionDescription, string[] exampleTags)
+        public virtual void ToVerifyTheDataOfCertainPropertiesReturnedInTheRepsonseFromTheEndpoint(string specificCategory, string name, string promotionName, string promotionDescription, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
@@ -151,8 +160,9 @@ this.ToVerifyTheStatusCodeOfTheResponse("6327", "200", ((string[])(null)));
             argumentsOfScenario.Add("name", name);
             argumentsOfScenario.Add("promotionName", promotionName);
             argumentsOfScenario.Add("promotionDescription", promotionDescription);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify the name property in the repsonse from the endpoint", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 14
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify the data of certain properties returned in the repsonse from the endpoi" +
+                    "nt", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 17
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -162,19 +172,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
+#line 4
 this.FeatureBackground();
 #line hidden
-#line 15
+#line 18
     testRunner.When(string.Format("a GET request is made to a {0}", specificCategory), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 16
+#line 19
     testRunner.Then(string.Format("the name property is {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 17
+#line 20
     testRunner.And("the category can relist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 18
+#line 21
     testRunner.And(string.Format("the promotions element contains {0} with description {1}", promotionName, promotionDescription), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -182,17 +192,19 @@ this.FeatureBackground();
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To verify the name property in the repsonse from the endpoint: 6327")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("To verify the data of certain properties returned in the repsonse from the endpoi" +
+            "nt: 6327")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "To verify the data present in the response sent by Categories API endpoint")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Categories")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "6327")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:specificCategory", "6327")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:name", "Carbon credits")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:promotionName", "Gallery")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:promotionDescription", "Good position in category")]
-        public void ToVerifyTheNamePropertyInTheRepsonseFromTheEndpoint_6327()
+        public void ToVerifyTheDataOfCertainPropertiesReturnedInTheRepsonseFromTheEndpoint_6327()
         {
-#line 14
-this.ToVerifyTheNamePropertyInTheRepsonseFromTheEndpoint("6327", "Carbon credits", "Gallery", "Good position in category", ((string[])(null)));
+#line 17
+this.ToVerifyTheDataOfCertainPropertiesReturnedInTheRepsonseFromTheEndpoint("6327", "Carbon credits", "Gallery", "Good position in category", ((string[])(null)));
 #line hidden
         }
     }
