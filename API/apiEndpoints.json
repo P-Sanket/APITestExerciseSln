@@ -1,0 +1,9 @@
+{
+  "BaseSettings": {
+    "basePath": "https://api.tmsandbox.co.nz/",
+    "version": "v1"
+  },
+  "Endpoints": {
+    "categories": "/Categories/"
+  }
+}
