@@ -10,8 +10,6 @@ namespace CategoriesSteps
     [Binding]
     public class StepDefinitions
     {
-        private readonly ScenarioContext _scenarioContext;
-
         private static string endpoint;
         private static RestResponse currentResponse;
         private JObject parsedResponse;
@@ -29,9 +27,11 @@ namespace CategoriesSteps
         [When(@"^a GET request is made to a (.*)$")]
         public void processRequestResponse(string categoryId)
         {
-            CategoriesAPIClient _client = new CategoriesAPIClient(endpoint);
-            currentResponse = _client.GetCategoryById(categoryId);
-            parsedResponse = helper.parseToJObject(currentResponse.Content);
+            using(var _client = new CategoriesAPIClient(endpoint)){
+                currentResponse = _client.GetCategoryById(categoryId);
+                parsedResponse = helper.parseToJObject(currentResponse.Content);
+            }
+        
         }   
 
 
