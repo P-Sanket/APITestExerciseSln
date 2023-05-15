@@ -162,7 +162,7 @@ this.ToVerifyTheStatusCodeOfTheResponse("6327", "200", ((string[])(null)));
             argumentsOfScenario.Add("promotionDescription", promotionDescription);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("To verify the data of certain properties returned in the repsonse from the endpoi" +
                     "nt", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 17
+#line 16
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -175,16 +175,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line hidden
-#line 18
+#line 17
     testRunner.When(string.Format("a GET request is made to a {0}", specificCategory), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 19
+#line 18
     testRunner.Then(string.Format("the name property is {0}", name), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 20
+#line 19
     testRunner.And("the category can relist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 20
     testRunner.And(string.Format("the promotions element contains {0} with description {1}", promotionName, promotionDescription), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -203,7 +203,7 @@ this.FeatureBackground();
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:promotionDescription", "Good position in category")]
         public void ToVerifyTheDataOfCertainPropertiesReturnedInTheRepsonseFromTheEndpoint_6327()
         {
-#line 17
+#line 16
 this.ToVerifyTheDataOfCertainPropertiesReturnedInTheRepsonseFromTheEndpoint("6327", "Carbon credits", "Gallery", "Good position in category", ((string[])(null)));
 #line hidden
         }
