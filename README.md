@@ -1,6 +1,6 @@
 # Simple BDD API Testing
 
-The C# solution demonstrates a simple way to quickly get setup and start scripting API test scenarios which follow the popular BDD testing technique.
+This C# solution demonstrates a simple way to quickly get setup and start scripting API test scenarios which follow the popular BDD testing technique.
 
 ## Installation
 
