@@ -4,7 +4,7 @@ The C# solution demonstrates a simple way to quickly get setup and start scripti
 
 ## Installation
 
-Open the APIExercise.sln file in either Visual Studio (recommended) / Visual Studio Code.
+Open the APIExercise.sln file in either Visual Studio (recommended) / Visual Studio Code as a existing project.
 
 Build the solution from the .sln directory
 ```bash
